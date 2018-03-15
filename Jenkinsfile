@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'dotnet --version'
-                sh 'dotnet build'
+                sh 'ls -la'
+                sh 'dotnet build aspnet-core-dotnet-core.csproj'
             }
         }
         stage('Test') {

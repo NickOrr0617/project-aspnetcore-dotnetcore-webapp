@@ -8,6 +8,9 @@ pipeline {
             }
         }
         stage('Test') {
+            environment {
+                DOTNET_CLI_TELEMETRY_OPTOUT = '1'
+            }
             steps {
                 sh 'dotnet test'
             }

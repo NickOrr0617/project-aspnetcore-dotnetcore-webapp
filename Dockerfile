@@ -8,7 +8,7 @@ COPY . ./
 RUN dotnet restore
 
 WORKDIR /app/aspnet-core-dotnet-core
-RUN dotnet build
+#RUN dotnet build
 
 
 EXPOSE 5000/tcp

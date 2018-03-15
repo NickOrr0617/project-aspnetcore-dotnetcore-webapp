@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'microsoft/aspnetcore-build:2.0' 
-            args '-v /.dotnet:/.dotnet' 
+            args '-v /root/.dotnet:/.dotnet' 
         }
     }
     stages {

@@ -5,6 +5,7 @@ ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 COPY . ./
 RUN dotnet restore
 WORKDIR /app
+RUN dotnet build
 
 
 EXPOSE 5000/tcp

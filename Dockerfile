@@ -10,8 +10,6 @@ RUN dotnet restore
 WORKDIR /app/aspnet-core-dotnet-core
 RUN dotnet build
 
-RUN dotnet run
 
-
-EXPOSE 5000/tcp
-#ENTRYPOINT ["dotnet", "run"]
+EXPOSE 57777/tcp
+ENTRYPOINT ["dotnet", "run"]

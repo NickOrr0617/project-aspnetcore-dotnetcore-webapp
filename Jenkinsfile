@@ -3,13 +3,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'which dotnet'
                 sh '/usr/bin/dotnet build'
             }
         }
         stage('Test') {
             steps {
-                sh 'dotnet test'
+                sh '/usr/bin/dotnet test'
             }
             post {
                 always {
@@ -19,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'dotnet run'
+                sh '/usr/bin/dotnet run'
             }
         }
     }

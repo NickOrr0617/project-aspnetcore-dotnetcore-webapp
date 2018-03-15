@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'who'
+                sh 'dotnet --version'
                 sh 'dotnet build'
             }
         }

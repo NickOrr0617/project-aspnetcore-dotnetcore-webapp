@@ -4,7 +4,6 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'dotnet restore' 
-                sh 'dotnet public -c release'
             }
         }
         stage('Test') {

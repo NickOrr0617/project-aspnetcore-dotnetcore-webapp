@@ -2,9 +2,12 @@
 FROM microsoft/aspnetcore-build:2.0
 ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
+WORKDIR /app
+
 COPY . ./
 RUN dotnet restore
-WORKDIR /app
+
+WORKDIR /app/aspnet-core-dotnet-core
 RUN dotnet build
 
 

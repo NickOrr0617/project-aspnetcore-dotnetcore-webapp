@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'testing'
+                sh 'dotnet test'
             }
         }
         stage('Deliver') { 

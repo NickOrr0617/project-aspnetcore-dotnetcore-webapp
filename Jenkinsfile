@@ -3,12 +3,11 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'dotnet restore' 
+                sh 'dotnet build'
             }
         }
         stage('Test') {
             steps {
-                sh 'dotnet build'
                 sh 'dotnet test'
             }
             post {

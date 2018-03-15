@@ -1,11 +1,10 @@
 #FROM microsoft/dotnet:latest
 FROM microsoft/aspnetcore-build:2.0
-WORKDIR /app
 
-COPY aspnet-core-dotnet-core/*.csproj ./
+COPY . ./
 RUN dotnet restore
+WORKDIR /app/aspnet-core-dotnet-core
 
 
-COPY aspnet-core-dotnet-core/ ./
 EXPOSE 5000/tcp
 #ENTRYPOINT ["dotnet", "run"]

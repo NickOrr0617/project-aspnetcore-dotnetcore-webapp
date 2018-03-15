@@ -14,7 +14,7 @@ pipeline {
             }
             post {
                 always {
-                    nunit 'target/surefire-reports/*.xml'
+                    nunit testResultsPattern: 'TestResult.xml'
                 }
             }
         }

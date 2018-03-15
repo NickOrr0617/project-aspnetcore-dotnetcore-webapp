@@ -4,7 +4,9 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'ls -la'
-                sh 'dotnet build aspnet-core-dotnet-core.csproj'
+                sh 'cd aspnet-core-dotnet-core'
+                sh 'ls -la'
+                sh 'dotnet build'
             }
         }
         stage('Test') {

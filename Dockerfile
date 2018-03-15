@@ -3,7 +3,7 @@ FROM microsoft/aspnetcore-build:2.0
 
 COPY . ./
 RUN dotnet restore
-WORKDIR /app/aspnet-core-dotnet-core
+WORKDIR /app
 
 
 EXPOSE 5000/tcp

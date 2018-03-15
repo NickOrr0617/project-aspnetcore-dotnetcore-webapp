@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'dotnet build'
+                sh 'which dotnet'
+                sh '/usr/bin/dotnet build'
             }
         }
         stage('Test') {

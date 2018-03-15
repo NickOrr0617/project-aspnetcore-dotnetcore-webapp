@@ -7,10 +7,10 @@ WORKDIR /app
 COPY . ./
 RUN dotnet restore
 
-CMD mkdir /.dotnet
-CMD chmod 777 /.dotnet
-#WORKDIR /app/aspnet-core-dotnet-core
-#RUN dotnet build
+WORKDIR /app/aspnet-core-dotnet-core
+RUN dotnet build
+
+RUN dotnet run
 
 
 EXPOSE 5000/tcp

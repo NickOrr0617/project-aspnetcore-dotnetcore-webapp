@@ -7,7 +7,8 @@ WORKDIR /app
 COPY . ./
 RUN dotnet restore
 
-WORKDIR /app/aspnet-core-dotnet-core
+CMD mkdir /.dotnet
+#WORKDIR /app/aspnet-core-dotnet-core
 #RUN dotnet build
 
 

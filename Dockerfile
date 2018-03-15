@@ -8,6 +8,7 @@ COPY . ./
 RUN dotnet restore
 
 CMD mkdir /.dotnet
+CMD chmod 777 /.dotnet
 #WORKDIR /app/aspnet-core-dotnet-core
 #RUN dotnet build
 

@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'touch /.dotnet/2.1.101.dotnetFirstUseSentinel'
+                sh 'touch testfile'
+                sh 'ls -la testfile'
+                sh 'rm testfile'
                 sh 'dotnet build'
             }
         }

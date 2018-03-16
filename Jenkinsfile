@@ -8,10 +8,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'touch testfile'
+                sh 'sudo touch testfile'
                 sh 'ls -la testfile'
-                sh 'rm testfile'
-                sh 'cat /etc/passwd'
+                sh 'sudo rm testfile'
+                sh 'ls -la /home'
                 sh 'dotnet build'
             }
         }

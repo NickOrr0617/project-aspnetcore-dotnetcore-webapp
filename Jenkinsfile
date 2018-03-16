@@ -8,9 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'sudo touch testfile'
-                sh 'ls -la testfile'
-                sh 'sudo rm testfile'
+                sh 'whoami'
                 sh 'ls -la /home'
                 sh 'dotnet build'
             }

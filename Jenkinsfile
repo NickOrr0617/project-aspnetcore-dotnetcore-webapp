@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                sh 'dotnet run'
+                sh 'dotnet run -p aspnet-core-dotnet-core'
             }
         }
     }

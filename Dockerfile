@@ -4,6 +4,9 @@ ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 WORKDIR /app
 
+RUN useradd jenkins
+USER jenkins
+
 COPY . ./
 RUN dotnet restore
 
@@ -12,4 +15,4 @@ RUN dotnet build
 
 
 EXPOSE 57777/tcp
-ENTRYPOINT ["dotnet", "run"]
+#ENTRYPOINT ["dotnet", "run"]

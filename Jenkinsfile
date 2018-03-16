@@ -11,6 +11,7 @@ pipeline {
                 sh 'touch testfile'
                 sh 'ls -la testfile'
                 sh 'rm testfile'
+                sh 'cat /etc/passwd'
                 sh 'dotnet build'
             }
         }

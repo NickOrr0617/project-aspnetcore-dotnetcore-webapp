@@ -8,10 +8,6 @@ RUN useradd jenkins
 USER jenkins
 
 COPY . ./
-RUN dotnet restore
-
-WORKDIR /app/aspnet-core-dotnet-core
-RUN dotnet build
 
 
 EXPOSE 57777/tcp

@@ -8,13 +8,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'ls -la /home'
                 sh 'dotnet build'
             }
         }
         stage('Test') {
             steps {
-                sh 'dotnet test'
+                echo 'dotnet test'
             }
         }
         stage('Deliver') { 
